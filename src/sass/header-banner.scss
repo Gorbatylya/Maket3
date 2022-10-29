@@ -13,7 +13,8 @@ h2, h1, h3, p {
 body {
     box-sizing: border-box;
   }
-  *, *:before, *:after {
+
+*, *:before, *:after {
     box-sizing: inherit;
   }
 
@@ -26,6 +27,7 @@ body {
         width: 100%;
         padding-top: 42px;
         padding-bottom: 32px;
+        margin-right: 402px;
     }
 
     &__content{
@@ -42,10 +44,9 @@ body {
         align-items: center;
         justify-content: center;
         border-bottom: 1px solid rgba(244, 191, 135, 0);
-
     }
 
-    &__item p{
+    &__item a{
         font-family: 'Raleway';
         font-style: normal;
         font-weight: 600;
@@ -59,9 +60,10 @@ body {
         align-items: center;
         justify-content: center;
         border-bottom: 1px solid rgba(244, 191, 135, 0);
+        text-decoration: none;
     }
 
-    &__item p:hover{
+    &__item a:hover{
         color: #F4BF87;
         border-bottom: 1px solid rgba(244, 191, 135, 1);
         transition: 0.3;
@@ -81,39 +83,19 @@ body {
 }
 
 .banner {
+    background-image: url(../img/banner/fon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 
 
     &__fon {
         background: -webkit-linear-gradient(0deg, rgb(237, 215, 137) 10%, rgb(233, 130, 131) 90%);
         background: -moz-linear-gradient(0deg, rgb(237, 215, 137) 10%, rgb(233, 130, 131) 90%);
         background: linear-gradient(0deg, rgb(237, 215, 137) 10%, rgb(233, 130, 131) 90%);
-        background-repeat: no-repeat;
-        position: absolute;
         opacity: 0.9;
-        top: 0;
-        left: 0;
-        max-width: 1510px;
-        width: 100%;
-        max-height: 1024px;
-        min-height: 1024px;
-        height: 100%;
     }
-
-	&__img-fon{
-        position: relative;
-        max-height: 1024px;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        max-width: 1510px;
-        width: 100%;
-        
-
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-position: center center;
-        // background-attachment: fixed;
-	}
 
     &__discription{
         margin-top: 77px;
@@ -130,7 +112,7 @@ body {
     }
 
 
-    &__title h1{
+    &__title{
         margin: 0;
         font-family: 'Montserrat';
         font-style: normal;
@@ -142,6 +124,7 @@ body {
         color: rgba(255, 255, 255, 1);
         position: relative;
         margin-bottom: 44px;
+        
     }
 
     &__title::after{
@@ -157,20 +140,24 @@ body {
         margin: auto;
     }
 
-    &__button {
+    &__button{
         margin-top: 118px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-bottom: 201px;
+        text-align: center;
     }
 
-    &__button button{
+    &__button{
         cursor: pointer;
         border: 4px solid #FFFFFF;
         max-width: 370px;
         height: 77px;
         width: 100%;
+        margin: auto;
         background: none;
+        &:hover{
+            background-color: #FFFFFF;
+            color: #F4BF87;
+        }
     }
 
     &__button a{
@@ -184,12 +171,7 @@ body {
         text-decoration: none;
     }
 
-    &__button button:hover{
-        background-color: #FFFFFF;
-    }
-
     &__button a:hover{
-        color: #F4BF87;
     }
 
     &__slider {
